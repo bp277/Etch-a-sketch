@@ -13,9 +13,11 @@ function makeRows(rows, cols) {
 }
 makeRows(16, 16)
 
-cellNum.addEventListener('click', (size) => {
+cellNum.addEventListener('click', () => {
     size = prompt('Enter the number of rows and columns.')
-    gridContainer.innerHTML = ''
+    while (gridContainer.lastElementChild) {
+        gridContainer.removeChild(gridContainer.lastElementChild);
+    }    
     gridContainer.style.setProperty('--grid-size', size);
     makeRows(size, size)
 
