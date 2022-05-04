@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
         <h1>Etch-a-sketch</h1>
-        <a href="#" class="cell-number">Number</a>
+        <div class="menu">
+            <div class="mode">
+                <a href="#" class="color-btn mode-btn">Color Mode</a>
+                <input type="color" id="color-select" colorpick-eyedropper-active="true">
+            </div>
+            <div class="mode">
+                <a href="#" class="rainbow mode-btn">Rainbow Mode</a>
+            </div>
+            <div class="mode">
+                <a href="#" class="eraser mode-btn">Eraser</a>
+            </div>
+            <div class="change-size">
+                <span style="color:#333">Change the grid size</span>
+                <input type="range" min="2" max="64" class="cell-number">
+            </div>
+        </div>
         <div id="grid-container"></div>
+        <a href="#" class="reset">Clear</a>
     </div>
 
 
