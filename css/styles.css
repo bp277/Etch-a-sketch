@@ -13,8 +13,16 @@
 h1 {
     font-size: 50px;
     font-family: 'Koulen', cursive;
-    padding-top: 30px!important;
     color: #333
+}
+h2 {
+    font-family: 'Indie Flower', cursive!important;
+    font-size: 34px;
+    background: rgb(36,16,0);
+    background: linear-gradient(90deg, rgba(36,16,0,1) 0%, rgba(121,80,9,1) 34%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotate(-3deg)
 }
 .menu {
     display: flex;
@@ -80,8 +88,8 @@ input[type="color"]::-moz-color-swatch {
     align-items: center;
 }
 #grid-container {
-    width: 600px;
-    height: 600px;
+    width: 550px;
+    height: 550px;
     display: grid;
     display: grid;
     grid-template-columns: repeat(var(--grid-size), 1fr);
