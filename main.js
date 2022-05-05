@@ -6,6 +6,9 @@ const colorBtn = document.querySelector('.color-btn')
 const eraser = document.querySelector('.eraser')
 const gridSize = document.querySelector('.cell-number').value
 const input = document.querySelector('.cell-number')
+const reset = document.querySelector('.reset')
+
+
 
 input.onchange = () => {
     gridContainer.innerHTML = ''
@@ -29,6 +32,10 @@ function makeGrid(currentGridSize) {
             gridItem.style.backgroundColor = `transparent`
 
         }) 
+        reset.addEventListener('click', () => {
+            gridItem.style.backgroundColor = `transparent`
+        
+        })
     }   
 }
 makeGrid(gridSize)
