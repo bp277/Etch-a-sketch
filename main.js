@@ -7,12 +7,15 @@ const eraser = document.querySelector('.eraser')
 const gridSize = document.querySelector('.cell-number').value
 const input = document.querySelector('.cell-number')
 const reset = document.querySelector('.reset')
+const gridSizeNum = document.querySelector('.grid-size-num')
+
 
 
 
 input.onchange = () => {
     gridContainer.innerHTML = ''
     makeGrid(input.value)
+    gridSizeNum.textContent = `${input.value} * ${input.value}`
 }
 
 
@@ -68,4 +71,7 @@ eraser.onclick = () => {
 }
 
 
-window.onload = () => colorBtn.classList.add('active');
+window.onload = () => {
+    colorBtn.classList.add('active');
+    gridSizeNum.textContent = `${input.value} * ${input.value}`
+}
